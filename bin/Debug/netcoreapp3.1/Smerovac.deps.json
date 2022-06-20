@@ -1,0 +1,62 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Smerovac/1.0.0": {
+        "dependencies": {
+          "Pcap.Net.x64": "1.0.4.1",
+          "Pcap.Net.x86": "1.0.4.1"
+        },
+        "runtime": {
+          "Smerovac.dll": {}
+        }
+      },
+      "Pcap.Net.x64/1.0.4.1": {
+        "runtime": {
+          "lib/net45/PcapDotNet.Base.dll": {
+            "assemblyVersion": "1.0.4.25027",
+            "fileVersion": "1.0.4.0"
+          },
+          "lib/net45/PcapDotNet.Core.Extensions.dll": {
+            "assemblyVersion": "1.0.4.25151",
+            "fileVersion": "1.0.4.0"
+          },
+          "lib/net45/PcapDotNet.Core.dll": {
+            "assemblyVersion": "1.0.4.25149",
+            "fileVersion": "0.0.0.0"
+          },
+          "lib/net45/PcapDotNet.Packets.dll": {
+            "assemblyVersion": "1.0.4.25028",
+            "fileVersion": "1.0.4.0"
+          }
+        }
+      },
+      "Pcap.Net.x86/1.0.4.1": {}
+    }
+  },
+  "libraries": {
+    "Smerovac/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Pcap.Net.x64/1.0.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8kyqaySh23tikkLMZW/DgI3uf+om3QCvvg1dj2h7O6nKHoz9G2j0OfIqozI8FvkymbcHei0JjeBcPP3/t6kAtA==",
+      "path": "pcap.net.x64/1.0.4.1",
+      "hashPath": "pcap.net.x64.1.0.4.1.nupkg.sha512"
+    },
+    "Pcap.Net.x86/1.0.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XRkiDvDs9Gx5i3wCaL2a8/i/BSG3ZX3oe0i75PR8eqEx3ZZE7+hkHZKRMKpc6EIhuZXH2v8ptwrpKr3wQN43Bg==",
+      "path": "pcap.net.x86/1.0.4.1",
+      "hashPath": "pcap.net.x86.1.0.4.1.nupkg.sha512"
+    }
+  }
+}

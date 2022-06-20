@@ -1,0 +1,141 @@
+﻿<Window x:Class="Smerovac.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Smerovac"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="1200">
+    <Grid>
+        <StackPanel Margin="0,0,0,0">
+                
+            
+            
+            <StackPanel Orientation="Horizontal">
+                <Label   Margin="0,0,0,0"> Port 1 IP :  </Label>
+                <TextBox Name="IpPort1" Margin="0,0,0,0" Height="20" Width="150" />
+                <Label   Margin="10,0,0,0"> Port 1 Mask :  </Label>
+                <TextBox Name="MaskPort1" Margin="0,0,0,0" Height="20" Width="150" />
+                <Button  Content="Add port1 IP" Click="AssignIpPort1" ClickMode="Press" Margin="10,0,0,0"  Width="100" Height="20" />
+                
+                <Label   Margin="10,0,0,0"> RIPv2  </Label>
+                <CheckBox  Name="Ripport1" Click="Rip1box" Margin="0,5,0,0"/>
+                
+                <Button  Content="Start " Click="Start" ClickMode="Press" Margin="100,0,0,0"  Width="150" Height="20" />
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal">
+                <Label   Margin="0,0,0,0"> Port 2 IP :  </Label>
+                <TextBox Name="IpPort2" Margin="0,0,0,0" Height="20" Width="150" />
+                <Label   Margin="10,0,0,0"> Port 2 Mask :  </Label>
+                <TextBox Name="MaskPort2" Margin="0,0,0,0" Height="20" Width="150" />
+                <Button  Content="Add port2 IP" Click="AssignIpPort2" ClickMode="Press" Margin="10,0,0,0"  Width="100" Height="20" />
+                
+                <Label   Margin="10,0,0,0"> RIPv2  </Label>
+                <CheckBox  Name="Ripport2" Click="Rip2box" Margin="0,5,0,0"/>
+                
+                <Button  Content="Test" Click="Test" ClickMode="Press" Margin="100,0,0,0"  Width="100" Height="20" />
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal">
+                <Label   Margin="0,0,0,0"> Arp IP :  </Label>
+                <TextBox Name="ArpIp" Margin="12,0,0,0" Height="20" Width="150" />
+                <Button  Content="Send Arp" Click="SendArp" ClickMode="Press" Margin="10,0,0,0"  Width="100" Height="20" />
+                
+                <Label   Margin="30,0,0,0"> Update :  </Label>
+                <TextBox Name="UpdateRIP" Margin="0,0,0,0" Height="20" Width="30" />
+                
+                <Label   Margin="10,0,0,0"> Invalid :  </Label>
+                <TextBox Name="InvalidRIP" Margin="0,0,0,0" Height="20" Width="30" />
+                
+                <Label   Margin="10,0,0,0"> Flush :  </Label>
+                <TextBox Name="FlushRIP" Margin="0,0,0,0" Height="20" Width="30" />
+                
+                <Label   Margin="10,0,0,0"> Holdown :  </Label>
+                <TextBox Name="HowldownRIP" Margin="0,0,0,0" Height="20" Width="30" />
+                
+                
+                <Button  Content="Set Timers" Click="UpdateTimers" ClickMode="Press" Margin="10,0,0,0"  Width="100" Height="20" />
+                
+            </StackPanel>
+            
+            
+           
+            
+            
+            
+            <StackPanel Margin="10,30,0,0" Orientation="Horizontal" >
+                
+                <StackPanel >
+                    <StackPanel >
+                        <TextBlock Name="ArpTable" Background="Blue" Width="250" Height="200"
+                                   Foreground="Black" Margin="0,0,0,0"></TextBlock>
+                    </StackPanel>
+                
+                    <StackPanel Orientation="Horizontal">
+                        <Button  Content="Clear ARP Table" Click="ClearArp" ClickMode="Press"  Width="100" Height="20" />
+                    </StackPanel>
+                
+                    <StackPanel Orientation="Horizontal">
+                        <Label   Margin="0,0,0,0"> Arp Table Timer :  </Label>
+                        <TextBox Name="ArpTableTimer" Margin="12,0,0,0" Height="20" Width="120" />
+                    </StackPanel>
+                </StackPanel>
+                
+                <StackPanel >
+                           
+                    <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
+                        <Label   Margin="0,0,0,0"> Interface1 </Label>
+                        <ComboBox Name="Interface1" Width="700" Height="20"  Margin="10,0,0,0"></ComboBox>
+                    </StackPanel>
+                
+                
+                    <StackPanel Orientation="Horizontal">
+                        <Label   Margin="0,0,0,0"> Interface2 </Label>
+                        <ComboBox Name="Interface2" Width="700" Height="20" Margin="10,0,0,240" ></ComboBox>  
+                    </StackPanel>
+
+                </StackPanel>
+            </StackPanel>
+            
+            <StackPanel Margin="0,-70,0,0">
+                
+                    <StackPanel Orientation="Horizontal">
+                        <ListView  Name="TableRoute">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="Type" Width="50" DisplayMemberBinding="{Binding Type}" />
+                                    <GridViewColumn Header="Sub" Width="105" DisplayMemberBinding="{Binding Subnet}" />
+                                    <GridViewColumn Header="Mask" Width="105" DisplayMemberBinding="{Binding Mask}" />
+                                    <GridViewColumn Header="Nexthop" Width="105" DisplayMemberBinding="{Binding NextHop}" />
+                                    <GridViewColumn Header="Interface" Width="400" DisplayMemberBinding="{Binding Interface}" />
+                                    <GridViewColumn Header="Active" Width="50" DisplayMemberBinding="{Binding Active}" />
+                                    <GridViewColumn Header="Metric" Width="50" DisplayMemberBinding="{Binding Metric}" />
+                                    <GridViewColumn Header="Timer" Width="50" DisplayMemberBinding="{Binding Timer}" />
+                                    
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </StackPanel>
+                
+                
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Name="Subnet" Margin="55,0,0,0" Height="20" Width="100" />
+                    <TextBox Name="Mask" Margin="5,0,0,0" Height="20" Width="100" />
+                    <TextBox Name="Nexthop" Margin="5,0,0,0" Height="20" Width="100" />
+                    <ComboBox Name="Interface" Width="400" Height="20"  Margin="5,0,0,0"></ComboBox>
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal">
+                    <Button  Content="Add Static Route" Click="AddStatic" ClickMode="Press"  Margin="250,10,0,0" Width="100" Height="20" />
+                    <Button  Content="Remove Route" Click="RemoveRoute" ClickMode="Press"  Margin="10,10,0,0" Width="100" Height="20" />
+                </StackPanel>
+                    
+                
+            </StackPanel>
+            
+            
+            
+        </StackPanel>
+    </Grid>
+</Window>

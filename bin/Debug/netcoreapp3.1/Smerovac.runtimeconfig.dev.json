@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\pukdo\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\pukdo\\.nuget\\packages"
+    ]
+  }
+}

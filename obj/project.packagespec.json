@@ -1,0 +1,59 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "C:\\Users\\pukdo\\RiderProjects\\Smerovac\\Smerovac\\Smerovac.csproj",
+    "projectName": "Smerovac",
+    "projectPath": "C:\\Users\\pukdo\\RiderProjects\\Smerovac\\Smerovac\\Smerovac.csproj",
+    "outputPath": "C:\\Users\\pukdo\\RiderProjects\\Smerovac\\Smerovac\\obj\\",
+    "projectStyle": "PackageReference",
+    "originalTargetFrameworks": [
+      "netcoreapp3.1"
+    ],
+    "sources": {
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "projectReferences": {}
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp3.1": {
+      "dependencies": {
+        "Pcap.Net.x64": {
+          "target": "Package",
+          "version": "[1.0.4.1, )"
+        },
+        "Pcap.Net.x86": {
+          "target": "Package",
+          "version": "[1.0.4.1, )"
+        }
+      },
+      "imports": [
+        "net461",
+        "net462",
+        "net47",
+        "net471",
+        "net472",
+        "net48"
+      ],
+      "assetTargetFallback": true,
+      "warn": true,
+      "frameworkReferences": {
+        "Microsoft.NETCore.App": {
+          "privateAssets": "all"
+        },
+        "Microsoft.WindowsDesktop.App.WPF": {
+          "privateAssets": "none"
+        }
+      },
+      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+    }
+  }
+}
